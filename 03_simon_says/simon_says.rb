@@ -27,13 +27,15 @@ end
 def titleize(string)
 	lowercase_words = %w{a an the and but or for nor of over}
 	word = string.split(" ")
-	first_word = string.shift.capitalize
-	if lowercase_words.include?(words)
-		word
-	else 
-		word.capitalize!
+	first_word = word.shift.capitalize
+	word.each do |word|
+		if lowercase_words.include?(word)
+			word
+		else 
+			word.capitalize!
+		end
 	end
-	
+	word.unshift(first_word)
 	word.join(" ")
 end
 
