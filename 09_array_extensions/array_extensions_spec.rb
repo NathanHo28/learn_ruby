@@ -36,7 +36,7 @@ describe Array do
     end
 
     it "returns a new array containing the squares of each element" do
-      expect([1,2,3]).square.to eq([1,4,9])
+      expect([1,2,3].square).to eq([1,4,9])
     end
   end
 
