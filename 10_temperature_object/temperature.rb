@@ -1,20 +1,13 @@
-# class Temperature
-
-# 	def initialize({key, value})
-# 		@key = :key
-# 		@value = value
-
+# to complete tomorrow
 
 class Temperature
-  def initialize(value_hash)
-    if value_hash[:f]
-      @temperature_base = value_hash[:f]
-    elsif value_hash[:c]
-      @temperature_base = value_hash[:c] * 9.0 / 5.0 + 32.0
-    end
+  def initialize(options)
+    @f = options(:f)
+    @c = options(:c)
   end
 
-  def to_fahrenheit
-    return @temperature_base
+  def fahrenheit(temp)
+    Temperature.new(:f => temp)
   end
+
 end
